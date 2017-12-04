@@ -3,8 +3,8 @@
 	$name = trim($_POST['name']);
 	$email = trim($_POST['email']);
 	$message = trim($_POST['message']);
-	
-	$emailTo = 'example@mail.com'; //Put your own email address here
+
+	$emailTo = 'andrenes@mail.com'; //Put your own email address here
 	if (empty($subject)) {
 	    $subject = 'Message from your website.';
 	}
@@ -15,5 +15,5 @@
 	mail($emailTo, $subject, $body, $headers);
 	$emailSent = true;
 	echo ('SEND');
-	
+
 ?>
