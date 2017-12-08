@@ -27,7 +27,7 @@
 		duration: 1000, // How long to animate.
 		axis: 'y', // Which of top and left should be modified.
 		event: 'click', // On which event to react.
-		stop: true, // Avoid queuing animations 
+		stop: true, // Avoid queuing animations
 		target: window // What to scroll (selector or element). The whole window by default.
 		/*
 		lock: false, // ignore events if already animating
@@ -47,10 +47,10 @@
 		}
 
 		return settings.lazy ?
-			// use event delegation, more links can be added later.		
+			// use event delegation, more links can be added later.
 			this.on(settings.event, 'a,area', function(e) {
 				if (filter.call(this)) {
-					scroll(e, this, settings); 
+					scroll(e, this, settings);
 				}
 			}) :
 			// bind concretely, to each matching link
@@ -79,7 +79,7 @@
 		var $target = $(settings.target);
 
 		if (settings.lock && $target.is(':animated') ||
-			settings.onBefore && settings.onBefore(e, elem, $target) === false) 
+			settings.onBefore && settings.onBefore(e, elem, $target) === false)
 			return;
 
 		if (settings.stop) {
@@ -100,7 +100,7 @@
 			$a.remove();
 			elem[attr] = id;
 		}
-			
+
 		$target
 			.scrollTo(elem, settings) // do scroll
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change

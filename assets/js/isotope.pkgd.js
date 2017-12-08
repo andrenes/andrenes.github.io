@@ -1259,7 +1259,7 @@ utils.modulo = function( num, div ) {
 };
 
 // ----- isArray ----- //
-  
+
 var objToString = Object.prototype.toString;
 utils.isArray = function( obj ) {
   return objToString.call( obj ) == '[object Array]';
@@ -4254,4 +4254,3 @@ var getText = docElem.textContent ?
   return Isotope;
 
 }));
-
